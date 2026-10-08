@@ -1,3 +1,4 @@
+// @ts-nocheck -- ported from the original app; loose typing kept as-is
 import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";

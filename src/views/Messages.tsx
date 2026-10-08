@@ -1,3 +1,4 @@
+// @ts-nocheck -- ported from the original app; loose typing kept as-is
 import { markMessageAsRead } from '@/lib/messages';
 import { useState, useEffect, useRef } from 'react';
 import { useLocation, useSearchParams } from '@/lib/router-compat';

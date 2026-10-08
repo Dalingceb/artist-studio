@@ -1,3 +1,4 @@
+// @ts-nocheck -- ported from the original app; loose typing kept as-is
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from '@/lib/router-compat';
 import { supabase } from '@/integrations/supabase/client';

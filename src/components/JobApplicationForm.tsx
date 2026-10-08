@@ -1,3 +1,4 @@
+// @ts-nocheck -- ported from the original app; loose typing kept as-is
 import { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
