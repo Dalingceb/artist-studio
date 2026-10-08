@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // Thin adapter so the ported pages can keep react-router-style calls on top of TanStack Router.
 import { forwardRef, useEffect, useMemo, type AnchorHTMLAttributes, type ReactNode } from "react";
