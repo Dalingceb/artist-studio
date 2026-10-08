@@ -1,5 +1,13 @@
 {
   "version": "7",
   "dialect": "postgresql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1791476384627,
+      "tag": "0000_swazi_artistry_schema",
+      "breakpoints": true
+    }
+  ]
 }
