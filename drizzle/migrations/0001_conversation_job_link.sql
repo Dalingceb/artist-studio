@@ -1,0 +1,1 @@
+ALTER TABLE public.conversations ADD COLUMN job_listing_id uuid REFERENCES public.job_listings(id) ON DELETE SET NULL;

@@ -304,6 +304,7 @@ export type Database = {
         Row: {
           created_at: string
           id: string
+          job_listing_id: string | null
           last_message: string | null
           profile_image: string | null
           updated_at: string
@@ -315,6 +316,7 @@ export type Database = {
         Insert: {
           created_at?: string
           id?: string
+          job_listing_id?: string | null
           last_message?: string | null
           profile_image?: string | null
           updated_at?: string
@@ -326,6 +328,7 @@ export type Database = {
         Update: {
           created_at?: string
           id?: string
+          job_listing_id?: string | null
           last_message?: string | null
           profile_image?: string | null
           updated_at?: string
@@ -335,6 +338,13 @@ export type Database = {
           user2_name?: string | null
         }
         Relationships: [
+          {
+            foreignKeyName: "conversations_job_listing_id_fkey"
+            columns: ["job_listing_id"]
+            isOneToOne: false
+            referencedRelation: "job_listings"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "conversations_user1_id_fkey"
             columns: ["user1_id"]
