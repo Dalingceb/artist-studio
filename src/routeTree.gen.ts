@@ -10,33 +10,336 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CategoriesRouteImport } from './routes/categories'
+import { Route as CreateJobRouteImport } from './routes/create-job'
+import { Route as CreateProfileRouteImport } from './routes/create-profile'
+import { Route as ExploreRouteImport } from './routes/explore'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ForgotPasswordRouteImport } from './routes/forgot-password'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as MessagesRouteImport } from './routes/messages'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
+import { Route as SignupRouteImport } from './routes/signup'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as ArtistIdRouteImport } from './routes/artist.$id'
+import { Route as JobsIndexRouteImport } from './routes/jobs.index'
+import { Route as PortfolioUploadRouteImport } from './routes/portfolio.upload'
+import { Route as ResourcesIndexRouteImport } from './routes/resources.index'
+import { Route as ResourcesIdRouteImport } from './routes/resources.$id'
+import { Route as AdminResourcesIndexRouteImport } from './routes/admin.resources.index'
+import { Route as AdminResourcesCreateRouteImport } from './routes/admin.resources.create'
+import { Route as JobsIdIndexRouteImport } from './routes/jobs.$id.index'
+import { Route as JobsIdApplyRouteImport } from './routes/jobs.$id.apply'
+import { Route as AdminResourcesEditIdRouteImport } from './routes/admin.resources.edit.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategoriesRoute = CategoriesRouteImport.update({
+  id: '/categories',
+  path: '/categories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreateJobRoute = CreateJobRouteImport.update({
+  id: '/create-job',
+  path: '/create-job',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreateProfileRoute = CreateProfileRouteImport.update({
+  id: '/create-profile',
+  path: '/create-profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExploreRoute = ExploreRouteImport.update({
+  id: '/explore',
+  path: '/explore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForgotPasswordRoute = ForgotPasswordRouteImport.update({
+  id: '/forgot-password',
+  path: '/forgot-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MessagesRoute = MessagesRouteImport.update({
+  id: '/messages',
+  path: '/messages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArtistIdRoute = ArtistIdRouteImport.update({
+  id: '/artist/$id',
+  path: '/artist/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JobsIndexRoute = JobsIndexRouteImport.update({
+  id: '/jobs/',
+  path: '/jobs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioUploadRoute = PortfolioUploadRouteImport.update({
+  id: '/portfolio/upload',
+  path: '/portfolio/upload',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesIndexRoute = ResourcesIndexRouteImport.update({
+  id: '/resources/',
+  path: '/resources/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesIdRoute = ResourcesIdRouteImport.update({
+  id: '/resources/$id',
+  path: '/resources/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminResourcesIndexRoute = AdminResourcesIndexRouteImport.update({
+  id: '/admin/resources/',
+  path: '/admin/resources/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminResourcesCreateRoute = AdminResourcesCreateRouteImport.update({
+  id: '/admin/resources/create',
+  path: '/admin/resources/create',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JobsIdIndexRoute = JobsIdIndexRouteImport.update({
+  id: '/jobs/$id/',
+  path: '/jobs/$id/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JobsIdApplyRoute = JobsIdApplyRouteImport.update({
+  id: '/jobs/$id/apply',
+  path: '/jobs/$id/apply',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminResourcesEditIdRoute = AdminResourcesEditIdRouteImport.update({
+  id: '/admin/resources/edit/$id',
+  path: '/admin/resources/edit/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/categories': typeof CategoriesRoute
+  '/create-job': typeof CreateJobRoute
+  '/create-profile': typeof CreateProfileRoute
+  '/explore': typeof ExploreRoute
+  '/faq': typeof FaqRoute
+  '/forgot-password': typeof ForgotPasswordRoute
+  '/login': typeof LoginRoute
+  '/messages': typeof MessagesRoute
+  '/profile': typeof ProfileRoute
+  '/reset-password': typeof ResetPasswordRoute
+  '/signup': typeof SignupRoute
+  '/artist/$id': typeof ArtistIdRoute
+  '/portfolio/upload': typeof PortfolioUploadRoute
+  '/resources/$id': typeof ResourcesIdRoute
+  '/admin/': typeof AdminIndexRoute
+  '/jobs/': typeof JobsIndexRoute
+  '/resources/': typeof ResourcesIndexRoute
+  '/admin/resources/create': typeof AdminResourcesCreateRoute
+  '/jobs/$id/apply': typeof JobsIdApplyRoute
+  '/admin/resources/': typeof AdminResourcesIndexRoute
+  '/jobs/$id/': typeof JobsIdIndexRoute
+  '/admin/resources/edit/$id': typeof AdminResourcesEditIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/categories': typeof CategoriesRoute
+  '/create-job': typeof CreateJobRoute
+  '/create-profile': typeof CreateProfileRoute
+  '/explore': typeof ExploreRoute
+  '/faq': typeof FaqRoute
+  '/forgot-password': typeof ForgotPasswordRoute
+  '/login': typeof LoginRoute
+  '/messages': typeof MessagesRoute
+  '/profile': typeof ProfileRoute
+  '/reset-password': typeof ResetPasswordRoute
+  '/signup': typeof SignupRoute
+  '/artist/$id': typeof ArtistIdRoute
+  '/portfolio/upload': typeof PortfolioUploadRoute
+  '/resources/$id': typeof ResourcesIdRoute
+  '/admin': typeof AdminIndexRoute
+  '/jobs': typeof JobsIndexRoute
+  '/resources': typeof ResourcesIndexRoute
+  '/admin/resources/create': typeof AdminResourcesCreateRoute
+  '/jobs/$id/apply': typeof JobsIdApplyRoute
+  '/admin/resources': typeof AdminResourcesIndexRoute
+  '/jobs/$id': typeof JobsIdIndexRoute
+  '/admin/resources/edit/$id': typeof AdminResourcesEditIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/categories': typeof CategoriesRoute
+  '/create-job': typeof CreateJobRoute
+  '/create-profile': typeof CreateProfileRoute
+  '/explore': typeof ExploreRoute
+  '/faq': typeof FaqRoute
+  '/forgot-password': typeof ForgotPasswordRoute
+  '/login': typeof LoginRoute
+  '/messages': typeof MessagesRoute
+  '/profile': typeof ProfileRoute
+  '/reset-password': typeof ResetPasswordRoute
+  '/signup': typeof SignupRoute
+  '/artist/$id': typeof ArtistIdRoute
+  '/portfolio/upload': typeof PortfolioUploadRoute
+  '/resources/$id': typeof ResourcesIdRoute
+  '/admin/': typeof AdminIndexRoute
+  '/jobs/': typeof JobsIndexRoute
+  '/resources/': typeof ResourcesIndexRoute
+  '/admin/resources/create': typeof AdminResourcesCreateRoute
+  '/jobs/$id/apply': typeof JobsIdApplyRoute
+  '/admin/resources/': typeof AdminResourcesIndexRoute
+  '/jobs/$id/': typeof JobsIdIndexRoute
+  '/admin/resources/edit/$id': typeof AdminResourcesEditIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/categories'
+    | '/create-job'
+    | '/create-profile'
+    | '/explore'
+    | '/faq'
+    | '/forgot-password'
+    | '/login'
+    | '/messages'
+    | '/profile'
+    | '/reset-password'
+    | '/signup'
+    | '/artist/$id'
+    | '/portfolio/upload'
+    | '/resources/$id'
+    | '/admin/'
+    | '/jobs/'
+    | '/resources/'
+    | '/admin/resources/create'
+    | '/jobs/$id/apply'
+    | '/admin/resources/'
+    | '/jobs/$id/'
+    | '/admin/resources/edit/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/categories'
+    | '/create-job'
+    | '/create-profile'
+    | '/explore'
+    | '/faq'
+    | '/forgot-password'
+    | '/login'
+    | '/messages'
+    | '/profile'
+    | '/reset-password'
+    | '/signup'
+    | '/artist/$id'
+    | '/portfolio/upload'
+    | '/resources/$id'
+    | '/admin'
+    | '/jobs'
+    | '/resources'
+    | '/admin/resources/create'
+    | '/jobs/$id/apply'
+    | '/admin/resources'
+    | '/jobs/$id'
+    | '/admin/resources/edit/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/categories'
+    | '/create-job'
+    | '/create-profile'
+    | '/explore'
+    | '/faq'
+    | '/forgot-password'
+    | '/login'
+    | '/messages'
+    | '/profile'
+    | '/reset-password'
+    | '/signup'
+    | '/artist/$id'
+    | '/portfolio/upload'
+    | '/resources/$id'
+    | '/admin/'
+    | '/jobs/'
+    | '/resources/'
+    | '/admin/resources/create'
+    | '/jobs/$id/apply'
+    | '/admin/resources/'
+    | '/jobs/$id/'
+    | '/admin/resources/edit/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CategoriesRoute: typeof CategoriesRoute
+  CreateJobRoute: typeof CreateJobRoute
+  CreateProfileRoute: typeof CreateProfileRoute
+  ExploreRoute: typeof ExploreRoute
+  FaqRoute: typeof FaqRoute
+  ForgotPasswordRoute: typeof ForgotPasswordRoute
+  LoginRoute: typeof LoginRoute
+  MessagesRoute: typeof MessagesRoute
+  ProfileRoute: typeof ProfileRoute
+  ResetPasswordRoute: typeof ResetPasswordRoute
+  SignupRoute: typeof SignupRoute
+  ArtistIdRoute: typeof ArtistIdRoute
+  PortfolioUploadRoute: typeof PortfolioUploadRoute
+  ResourcesIdRoute: typeof ResourcesIdRoute
+  AdminIndexRoute: typeof AdminIndexRoute
+  JobsIndexRoute: typeof JobsIndexRoute
+  ResourcesIndexRoute: typeof ResourcesIndexRoute
+  AdminResourcesCreateRoute: typeof AdminResourcesCreateRoute
+  JobsIdApplyRoute: typeof JobsIdApplyRoute
+  AdminResourcesIndexRoute: typeof AdminResourcesIndexRoute
+  JobsIdIndexRoute: typeof JobsIdIndexRoute
+  AdminResourcesEditIdRoute: typeof AdminResourcesEditIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +351,195 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/categories': {
+      id: '/categories'
+      path: '/categories'
+      fullPath: '/categories'
+      preLoaderRoute: typeof CategoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/create-job': {
+      id: '/create-job'
+      path: '/create-job'
+      fullPath: '/create-job'
+      preLoaderRoute: typeof CreateJobRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/create-profile': {
+      id: '/create-profile'
+      path: '/create-profile'
+      fullPath: '/create-profile'
+      preLoaderRoute: typeof CreateProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explore': {
+      id: '/explore'
+      path: '/explore'
+      fullPath: '/explore'
+      preLoaderRoute: typeof ExploreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forgot-password': {
+      id: '/forgot-password'
+      path: '/forgot-password'
+      fullPath: '/forgot-password'
+      preLoaderRoute: typeof ForgotPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/messages': {
+      id: '/messages'
+      path: '/messages'
+      fullPath: '/messages'
+      preLoaderRoute: typeof MessagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/artist/$id': {
+      id: '/artist/$id'
+      path: '/artist/$id'
+      fullPath: '/artist/$id'
+      preLoaderRoute: typeof ArtistIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jobs/': {
+      id: '/jobs/'
+      path: '/jobs'
+      fullPath: '/jobs/'
+      preLoaderRoute: typeof JobsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio/upload': {
+      id: '/portfolio/upload'
+      path: '/portfolio/upload'
+      fullPath: '/portfolio/upload'
+      preLoaderRoute: typeof PortfolioUploadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/': {
+      id: '/resources/'
+      path: '/resources'
+      fullPath: '/resources/'
+      preLoaderRoute: typeof ResourcesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/$id': {
+      id: '/resources/$id'
+      path: '/resources/$id'
+      fullPath: '/resources/$id'
+      preLoaderRoute: typeof ResourcesIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/resources/': {
+      id: '/admin/resources/'
+      path: '/admin/resources'
+      fullPath: '/admin/resources/'
+      preLoaderRoute: typeof AdminResourcesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/resources/create': {
+      id: '/admin/resources/create'
+      path: '/admin/resources/create'
+      fullPath: '/admin/resources/create'
+      preLoaderRoute: typeof AdminResourcesCreateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jobs/$id/': {
+      id: '/jobs/$id/'
+      path: '/jobs/$id'
+      fullPath: '/jobs/$id/'
+      preLoaderRoute: typeof JobsIdIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jobs/$id/apply': {
+      id: '/jobs/$id/apply'
+      path: '/jobs/$id/apply'
+      fullPath: '/jobs/$id/apply'
+      preLoaderRoute: typeof JobsIdApplyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/resources/edit/$id': {
+      id: '/admin/resources/edit/$id'
+      path: '/admin/resources/edit/$id'
+      fullPath: '/admin/resources/edit/$id'
+      preLoaderRoute: typeof AdminResourcesEditIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CategoriesRoute: CategoriesRoute,
+  CreateJobRoute: CreateJobRoute,
+  CreateProfileRoute: CreateProfileRoute,
+  ExploreRoute: ExploreRoute,
+  FaqRoute: FaqRoute,
+  ForgotPasswordRoute: ForgotPasswordRoute,
+  LoginRoute: LoginRoute,
+  MessagesRoute: MessagesRoute,
+  ProfileRoute: ProfileRoute,
+  ResetPasswordRoute: ResetPasswordRoute,
+  SignupRoute: SignupRoute,
+  ArtistIdRoute: ArtistIdRoute,
+  PortfolioUploadRoute: PortfolioUploadRoute,
+  ResourcesIdRoute: ResourcesIdRoute,
+  AdminIndexRoute: AdminIndexRoute,
+  JobsIndexRoute: JobsIndexRoute,
+  ResourcesIndexRoute: ResourcesIndexRoute,
+  AdminResourcesCreateRoute: AdminResourcesCreateRoute,
+  JobsIdApplyRoute: JobsIdApplyRoute,
+  AdminResourcesIndexRoute: AdminResourcesIndexRoute,
+  JobsIdIndexRoute: JobsIdIndexRoute,
+  AdminResourcesEditIdRoute: AdminResourcesEditIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
