@@ -23,7 +23,7 @@ import BookingForm from "@/components/BookingForm";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import ReviewsSection from "@/components/ReviewsSection";
 import AdDisplay from "@/components/AdDisplay";
-import Messages from '@/pages/Messages';
+import Messages from '@/views/Messages';
 
 const ArtistProfile = () => {
   const { id } = useParams<{ id: string }>();
