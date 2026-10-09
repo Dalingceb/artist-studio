@@ -42,14 +42,14 @@ const UserAccountCard = ({ user, profile, onEditProfile }: UserAccountCardProps)
           </div>
           <div>
             <h3 className="text-lg font-semibold">{profile?.full_name || 'No name set'}</h3>
-            <div className="flex items-center space-x-2">
-              <Mail size={14} className="text-gray-500" />
-              <span className="text-sm text-gray-600">{user.email}</span>
+            <div className="flex items-center space-x-2 min-w-0">
+              <Mail size={14} className="text-gray-500 shrink-0" />
+              <span className="text-sm text-gray-600 truncate">{user.email}</span>
             </div>
           </div>
         </div>
         
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
           <div>
             <p className="text-sm font-medium text-gray-700">Account Type</p>
             <Badge variant={profile?.is_artist ? 'default' : 'secondary'}>

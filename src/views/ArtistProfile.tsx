@@ -119,7 +119,7 @@ const ArtistProfile = () => {
     <><div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <div className="relative h-72 bg-gradient-to-r from-swati-purple/90 to-swati-teal/90">
+        <div className="relative h-48 md:h-72 bg-gradient-to-r from-swati-purple/90 to-swati-teal/90">
           {artist.banner_image ? (
             <img
               src={artist.banner_image}
@@ -128,10 +128,11 @@ const ArtistProfile = () => {
           ) : (
             <div className="absolute inset-0 bg-gradient-to-r from-swati-purple/30 to-swati-teal/30"></div>
           )}
+        </div>
 
-          <div className="absolute inset-x-0 bottom-0 transform translate-y-1/2">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-end">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white overflow-hidden bg-white shadow-lg">
+        <div className="relative -mt-16 md:-mt-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center md:items-end gap-4 md:gap-6">
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 rounded-full border-4 border-white overflow-hidden bg-white shadow-lg">
                 {artist.profile_image ? (
                   <img
                     src={artist.profile_image}
@@ -143,7 +144,7 @@ const ArtistProfile = () => {
                   </div>
                 )}
               </div>
-              <div className="mt-4 md:mt-0 md:ml-6 bg-white p-4 md:p-6 rounded-lg shadow-lg flex-1 flex flex-col md:flex-row md:items-center md:justify-between">
+              <div className="w-full min-w-0 bg-white p-4 md:p-6 rounded-lg shadow-lg flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
                   <h1 className="text-xl md:text-2xl font-bold font-serif">{artist.name}</h1>
                   <div className="flex flex-wrap items-center gap-2 mt-1 mb-2">
