@@ -170,7 +170,7 @@ const ArtistProfile = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-2 items-stretch md:items-end mt-4 md:mt-0">
+                <div className="flex flex-col sm:flex-row md:flex-col gap-2 items-stretch md:items-end shrink-0">
                   <Button className="bg-swati-purple hover:bg-swati-purple/90" onClick={() => setIsBookingOpen(true)}>
                     Book Now
                   </Button>
@@ -213,10 +213,9 @@ const ArtistProfile = () => {
                 </Dialog>
               </div>
             </div>
-          </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-28 md:mt-24 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pb-16">
           {/* Banner Ad */}
           <AdDisplay position="banner" page="artist-profile" className="mb-8" />
           
