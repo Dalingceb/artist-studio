@@ -1,5 +1,6 @@
 
 import { Link } from '@/lib/router-compat';
+import { siteConfig } from '@/lib/site-config';
 
 const Footer = () => {
   return (
@@ -89,7 +90,7 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-swati-gold tracking-wider uppercase mb-4">Contact</h3>
             <address className="not-italic text-gray-300 space-y-2">
               <p>Mbabane, Eswatini</p>
-              <p className="mt-4">swaziartistry@gmail.com</p>
+              <p className="mt-4"><a href={`mailto:${siteConfig.email}`} className="hover:text-white break-all">{siteConfig.email}</a></p>
               <p>+268 78209908</p>
             </address>
           </div>
