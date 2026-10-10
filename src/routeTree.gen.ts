@@ -19,9 +19,11 @@ import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ForgotPasswordRouteImport } from './routes/forgot-password'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as MessagesRouteImport } from './routes/messages'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as SignupRouteImport } from './routes/signup'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as ArtistIdRouteImport } from './routes/artist.$id'
 import { Route as JobsIndexRouteImport } from './routes/jobs.index'
@@ -84,6 +86,11 @@ const MessagesRoute = MessagesRouteImport.update({
   path: '/messages',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProfileRoute = ProfileRouteImport.update({
   id: '/profile',
   path: '/profile',
@@ -97,6 +104,11 @@ const ResetPasswordRoute = ResetPasswordRouteImport.update({
 const SignupRoute = SignupRouteImport.update({
   id: '/signup',
   path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminIndexRoute = AdminIndexRouteImport.update({
@@ -166,9 +178,11 @@ export interface FileRoutesByFullPath {
   '/forgot-password': typeof ForgotPasswordRoute
   '/login': typeof LoginRoute
   '/messages': typeof MessagesRoute
+  '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/reset-password': typeof ResetPasswordRoute
   '/signup': typeof SignupRoute
+  '/terms': typeof TermsRoute
   '/artist/$id': typeof ArtistIdRoute
   '/portfolio/upload': typeof PortfolioUploadRoute
   '/resources/$id': typeof ResourcesIdRoute
@@ -192,9 +206,11 @@ export interface FileRoutesByTo {
   '/forgot-password': typeof ForgotPasswordRoute
   '/login': typeof LoginRoute
   '/messages': typeof MessagesRoute
+  '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/reset-password': typeof ResetPasswordRoute
   '/signup': typeof SignupRoute
+  '/terms': typeof TermsRoute
   '/artist/$id': typeof ArtistIdRoute
   '/portfolio/upload': typeof PortfolioUploadRoute
   '/resources/$id': typeof ResourcesIdRoute
@@ -219,9 +235,11 @@ export interface FileRoutesById {
   '/forgot-password': typeof ForgotPasswordRoute
   '/login': typeof LoginRoute
   '/messages': typeof MessagesRoute
+  '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/reset-password': typeof ResetPasswordRoute
   '/signup': typeof SignupRoute
+  '/terms': typeof TermsRoute
   '/artist/$id': typeof ArtistIdRoute
   '/portfolio/upload': typeof PortfolioUploadRoute
   '/resources/$id': typeof ResourcesIdRoute
@@ -247,9 +265,11 @@ export interface FileRouteTypes {
     | '/forgot-password'
     | '/login'
     | '/messages'
+    | '/privacy'
     | '/profile'
     | '/reset-password'
     | '/signup'
+    | '/terms'
     | '/artist/$id'
     | '/portfolio/upload'
     | '/resources/$id'
@@ -273,9 +293,11 @@ export interface FileRouteTypes {
     | '/forgot-password'
     | '/login'
     | '/messages'
+    | '/privacy'
     | '/profile'
     | '/reset-password'
     | '/signup'
+    | '/terms'
     | '/artist/$id'
     | '/portfolio/upload'
     | '/resources/$id'
@@ -299,9 +321,11 @@ export interface FileRouteTypes {
     | '/forgot-password'
     | '/login'
     | '/messages'
+    | '/privacy'
     | '/profile'
     | '/reset-password'
     | '/signup'
+    | '/terms'
     | '/artist/$id'
     | '/portfolio/upload'
     | '/resources/$id'
@@ -326,9 +350,11 @@ export interface RootRouteChildren {
   ForgotPasswordRoute: typeof ForgotPasswordRoute
   LoginRoute: typeof LoginRoute
   MessagesRoute: typeof MessagesRoute
+  PrivacyRoute: typeof PrivacyRoute
   ProfileRoute: typeof ProfileRoute
   ResetPasswordRoute: typeof ResetPasswordRoute
   SignupRoute: typeof SignupRoute
+  TermsRoute: typeof TermsRoute
   ArtistIdRoute: typeof ArtistIdRoute
   PortfolioUploadRoute: typeof PortfolioUploadRoute
   ResourcesIdRoute: typeof ResourcesIdRoute
@@ -414,6 +440,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MessagesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/profile': {
       id: '/profile'
       path: '/profile'
@@ -433,6 +466,13 @@ declare module '@tanstack/react-router' {
       path: '/signup'
       fullPath: '/signup'
       preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/': {
@@ -526,9 +566,11 @@ const rootRouteChildren: RootRouteChildren = {
   ForgotPasswordRoute: ForgotPasswordRoute,
   LoginRoute: LoginRoute,
   MessagesRoute: MessagesRoute,
+  PrivacyRoute: PrivacyRoute,
   ProfileRoute: ProfileRoute,
   ResetPasswordRoute: ResetPasswordRoute,
   SignupRoute: SignupRoute,
+  TermsRoute: TermsRoute,
   ArtistIdRoute: ArtistIdRoute,
   PortfolioUploadRoute: PortfolioUploadRoute,
   ResourcesIdRoute: ResourcesIdRoute,
