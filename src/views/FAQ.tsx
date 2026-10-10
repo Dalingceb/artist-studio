@@ -23,11 +23,11 @@ const FAQ = () => {
     },
     {
       question: "I am an artist. How do I create a profile?",
-      answer: "You can create an artist profile by signing up for an account and then navigating to your user profile. From there, click on 'Create Artist Profile' and fill out the required information about your talent, expertise, and rates. Once your profile is approved, it will be visible to potential clients."
+      answer: "You can create an artist profile by signing up for an account and then navigating to your user profile. From there, click on 'Create Artist Profile' and fill out the required information about your talent, expertise, and rates. As soon as you save it, your profile is visible to potential clients."
     },
     {
-      question: "How are artists vetted on the platform?",
-      answer: "We have a verification process that includes reviewing portfolio materials, checking references, and verifying professional credentials when applicable. We also rely on client reviews and ratings to maintain quality across the platform."
+      question: "Does Swazi Artistry check or verify artists?",
+      answer: "No. Artists create and manage their own profiles, and Swazi Artistry does not vet or verify them. Before booking, look through an artist's portfolio and read reviews from other clients."
     },
     {
       question: "What categories of talent are available?",

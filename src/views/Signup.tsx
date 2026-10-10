@@ -148,6 +148,12 @@ const Signup = () => {
             </Button>
           </div>
         </form>
+
+        <p className="mt-4 text-center text-xs text-gray-500">
+          By creating an account you agree to the{" "}
+          <Link to="/terms" className="text-swati-teal hover:underline">Terms of Use</Link> and{" "}
+          <Link to="/privacy" className="text-swati-teal hover:underline">Privacy Policy</Link>.
+        </p>
         
         <div className="mt-4 text-center">
           <p className="text-sm text-gray-600">

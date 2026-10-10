@@ -11,13 +11,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const categories = [
+export const categories = [
   { value: "all", label: "All Categories" },
   { value: "Music & Performance", label: "Music & Performance" },
   { value: "Visual Arts & Design", label: "Visual Arts & Design" },
   { value: "Creative Writing & Literature", label: "Creative Writing & Literature" },
   { value: "Dance & Movement", label: "Dance & Movement" },
-  { value: "Theater & Acting", label: "Theater & Acting" },
+  { value: "Theatre & Acting", label: "Theatre & Acting" },
   { value: "Photography", label: "Photography" },
   { value: "Film & Video", label: "Film & Video" },
   { value: "Public Speaking", label: "Public Speaking" },
