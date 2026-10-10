@@ -1,5 +1,6 @@
 
 import { Link } from '@/lib/router-compat';
+import { siteConfig } from '@/lib/site-config';
 
 const Footer = () => {
   return (
