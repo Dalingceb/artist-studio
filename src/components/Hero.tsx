@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from '@/lib/router-compat';
 import { useAuth } from "@/hooks/useAuth";
+import { categories } from "@/components/SearchBar";
 
 const Hero = () => {
   const { user } = useAuth();
@@ -62,7 +63,7 @@ const Hero = () => {
               <div className="flex flex-wrap items-center text-sm text-gray-500 gap-3 mb-8">
               <div className="flex items-center">
                 <div className="h-4 w-4 rounded-full bg-swati-teal mr-2" />
-                  <span>+20 Categories</span>
+                  <span>{categories.length - 1} Categories</span>
                 </div>
                 <div className="flex items-center">
                   <div className="h-4 w-4 rounded-full bg-swati-coral mr-2" />

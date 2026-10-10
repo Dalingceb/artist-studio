@@ -17,7 +17,7 @@ const categories = [
   "Visual Arts & Design",
   "Creative Writing & Literature",
   "Dance & Movement",
-  "Theater & Acting",
+  "Theatre & Acting",
   "Photography",
   "Film & Video",
   "Public Speaking",
